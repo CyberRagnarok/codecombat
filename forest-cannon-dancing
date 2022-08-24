@@ -1,0 +1,28 @@
+// Питомец должен бегать вперёд и назад между отметками X.
+// Герой должен подбадривать всё время!
+
+public class AI {
+    public static var onSpawn() {
+        pet.moveXY(48, 8);
+        pet.moveXY(12, 8);
+    }
+    
+    public static void main(String[] args) {
+        // Напиши функцию обработки событий `onSpawn` для питомца.
+        // Функция должна заставить питомца бегать вперёд и назад.
+        // Сначала к правой отметке, затем на левую:
+        // Подбадривай питомца. Не удаляй это:
+        
+        while (true) {
+            onSpawn();
+            pet.on("spawn", onSpawn);
+            hero.say("Беги!!!");
+            hero.say("Быстрее!");
+            hero.say("message");
+            hero.say("message");
+            hero.say("message");
+            hero.say("message");
+        }
+        
+    }
+}
