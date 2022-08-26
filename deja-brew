@@ -1,0 +1,16 @@
+public class AI {
+public static void main(String[] args) {
+int potionsOnTheWall = 10;
+int numToTakeDown = 1;
+while(true) {
+    hero.say(potionsOnTheWall + " potions of health on the wall!");
+    // Спой следующую строку:
+    hero.say(potionsOnTheWall + " potions of health!");
+    // Спой следующую строку:
+    hero.say("Take " + numToTakeDown + " down, pass it around!");
+    potionsOnTheWall -= numToTakeDown;
+    // Спой последнюю строку:
+    hero.say(potionsOnTheWall + " potions of health on the wall!");
+    }
+}
+}
