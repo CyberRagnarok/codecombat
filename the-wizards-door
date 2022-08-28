@@ -1,0 +1,15 @@
+public class AI {
+    public static void main(String args[]) {
+        hero.moveXY(30, 13); //lazlo
+        var las = hero.findNearestFriend().getSecret();        
+        hero.moveXY(17,26); //ersebet
+        var erz = las + 7;
+        hero.say(erz);
+        hero.moveXY(30, 39);
+        var sim = erz / 4;
+        hero.say(sim);
+        hero.moveXY(43, 26);
+        var aga = sim * las;
+        hero.say(aga);
+        }
+    }
