@@ -1,0 +1,30 @@
+// Артиллерия использует монеты в качестве цели.
+// Ты будешь дальномером для артиллерии.
+
+public class AI {
+    // Напиши функцию.
+    public static var coinDistance() {
+        // Найди ближайшую монету.
+        var coin = hero.findNearestItem();
+        if (coin) {
+            return hero.distanceTo(coin);
+        } else {
+            return 0;
+        }
+        // Если видишь монету, верни расстояние до неё.
+        
+        // В противном случае верни 0.
+        
+    }
+    
+    public static void main(String[] args) {
+        while (true) {
+            float distance = coinDistance();
+            if (distance > 0) {
+                // Сообщи расстояние.
+                hero.say(distance);
+            }
+        }
+        
+    }
+}
