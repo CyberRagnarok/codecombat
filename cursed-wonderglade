@@ -1,0 +1,29 @@
+// Поляна чудес изменилась с нашего последнего визита.
+// Огры прокляли её и мы должны победить их.
+// Бурл все еще собирает драгоценности, потому не трогай их.
+// Также не надо атаковать бурла.
+
+public class AI {
+    public static void main(String[] args) {
+        while (true) {
+            // Найди ближайший предмет.
+            // Собери его (если он есть) только если его тип  (type) не "gem".
+            var item = hero.findNearestItem();
+            if (item) {
+                if (item.type != "gem") {
+                    hero.moveXY(item.pos.x,item.pos.y);
+                }
+                
+            }
+            var enemy = hero.findNearestEnemy();
+            if (enemy) {
+                if (enemy.type != "burl") {
+                    hero.attack(enemy);
+                }
+            }
+            // Найди ближайшего врага.
+            // Атакуй его, если он есть и его тип не "burl".
+            
+        }
+    }
+}
