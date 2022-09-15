@@ -1,0 +1,27 @@
+public class AI {
+    public static void main(String[] args) {
+        // Соберай монеты. Игнорируй "sand-yak" и "burl".
+        while(true) {
+            var enemy = hero.findNearestEnemy();
+            var item = hero.findNearestItem();
+            if (enemy) {
+                if (enemy.type == "sand-yak" || enemy.type == "burl") {
+                    // Не нападай! Просто продолжай собирать монеты.
+                    hero.findNearestItem();
+                } else {
+                    // Но если тип врага "thrower" или "ogre", атакуй их. 
+                    (enemy.type == "thrower" || enemy.type == "orge");
+                    hero.attack(enemy);
+                }
+            } else if (item) {
+            var pos = item.pos;
+            float x = pos.x;
+            float y = pos.y;
+                hero.moveXY(x, y);
+            } else {
+                hero.moveXY(41, 31);
+            }
+        }
+        
+    }
+}
