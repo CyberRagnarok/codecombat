@@ -1,0 +1,22 @@
+public class AI {
+    public static void main(String[] args) {
+        // Солдаты потихоньку прибудут, но силы огров их превосходят.
+        // Простейшей атаки в цикле недостаточно для выживания.
+        while(true) {
+            var flag = hero.findFlag();
+            var enemy = hero.findNearestEnemy();
+            if(flag) {
+                hero.pickUpFlag(flag);
+            }
+            
+            if (enemy) {
+                if (hero.isReady("cleave")) {
+                    hero.cleave(enemy);
+                } else {
+                    hero.attack(enemy);
+                }
+            }
+            
+        }
+    }
+}
