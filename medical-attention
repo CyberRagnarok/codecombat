@@ -1,0 +1,23 @@
+public class AI {
+    public static void main(String[] args) {
+        while(true) {
+            var enemy = hero.findNearestEnemy();
+            var currentHealth = hero.health;
+            var healingThreshold = hero.maxHealth / 2;
+            
+            // Если текущее здоровье меньше порога,
+            // двигайтесь к точке исцеления и скажите, "heal me".
+            // Иначе атакуй. Тебе придётся бороться изо всех сил!
+            
+            if (currentHealth < healingThreshold) {
+                hero.moveXY(65, 46);
+                hero.say("heal me");
+            } else {
+                var enemy = hero.findNearestEnemy();
+                
+            } if (enemy) {
+                hero.attack(enemy);
+            }
+        }
+    }
+}
