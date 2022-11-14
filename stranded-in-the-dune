@@ -1,0 +1,30 @@
+public class AI {
+    public static void main(String[] args) {
+        // Двигайся к крайней правой стороне карты, чтобы обнаружить новые места.
+        // Если нужно больше информации, загляни в "Советы"
+        hero.moveXY(110, 39);
+        while(true) {
+            var flag = hero.findFlag();
+            var newX = hero.pos.x + 5;
+            var newY = hero.pos.y;
+            var enemy = hero.findNearestEnemy();
+            if (flag) {
+                hero.pickUpFlag(flag);
+            }
+            var item = hero.findNearestItem();
+            if (item) {
+                var pos = item.pos;
+                float x = pos.x;
+                float y = pos.y;
+                hero.moveXY(x, y);
+            }
+                if (enemy) {
+                if (enemy.type != "sand-yak") {
+                    hero.attack(enemy);
+                } else {
+                    hero.moveXY(newX, newY);
+                }
+        }
+        }
+    }
+}
